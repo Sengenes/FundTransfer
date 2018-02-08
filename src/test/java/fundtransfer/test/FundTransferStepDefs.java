@@ -4,12 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
-/*import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;*/
 
 import cucumber.annotation.*;
 import cucumber.annotation.en.*;
@@ -32,7 +26,7 @@ public void The_user_is_on_fund_transfer_page() {
 public void He_enters_payeeName(String payeeName) {
 	driver.findElement(By.id("payee")).sendKeys(payeeName);
 }
-@And("he enters \"([^\"]*)\" as amount")
+@And("he enters as amount")
 public void He_enters_amount(String amount) {
 	driver.findElement(By.id("amount")).sendKeys(amount);
 }

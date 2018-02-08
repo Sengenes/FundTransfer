@@ -32,8 +32,7 @@
           },
           {
             "result": {
-              "duration": 103451200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "ensure the fund transfer is complete with \"$100 transferred successfully to Jim!!\" message",
@@ -51,7 +50,54 @@
         ]
       },
       {
-        "line": 16,
+        "line": 15,
+        "name": "Invalid Payee",
+        "description": "",
+        "id": "customer-transfer\u0027s-fund;invalid-payee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "line": 16,
+            "name": "the user is on Fund Transfer Page",
+            "keyword": "Given "
+          },
+          {
+            "line": 17,
+            "name": "he enters \"Jack\" as payee name",
+            "keyword": "When "
+          },
+          {
+            "line": 18,
+            "name": "he enters \"100\" as amount",
+            "keyword": "And "
+          },
+          {
+            "line": 19,
+            "name": "he Submits request for Fund Transfer",
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "ensure a transaction failure message \"Transfer failed!! \u0027Jack\u0027 is not registered in your List of Payees\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Transfer failed!! \u0027Jack\u0027 is not registered in your List of Payees",
+                  "offset": 38
+                }
+              ],
+              "location": "FundTransferStepDefs.Ensure_a_transaction_failure_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 22,
         "name": "Account is overdrawn past the overdraft limit",
         "description": "",
         "id": "customer-transfer\u0027s-fund;account-is-overdrawn-past-the-overdraft-limit",
@@ -59,31 +105,30 @@
         "keyword": "Scenario",
         "steps": [
           {
-            "line": 17,
+            "line": 23,
             "name": "the user is on Fund Transfer Page",
             "keyword": "Given "
           },
           {
-            "line": 18,
+            "line": 24,
             "name": "he enters \"Tim\" as payee name",
             "keyword": "When "
           },
           {
-            "line": 19,
+            "line": 25,
             "name": "he enters \"1000000\" as amount",
             "keyword": "And "
           },
           {
-            "line": 20,
+            "line": 26,
             "name": "he Submits request for Fund Transfer",
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 84090427,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 21,
+            "line": 27,
             "name": "ensure a transaction failure message \"Transfer failed!! account cannot be overdrawn\" is displayed",
             "match": {
               "arguments": [

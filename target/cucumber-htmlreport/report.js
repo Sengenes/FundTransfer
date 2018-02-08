@@ -43,7 +43,7 @@ formatter.match({
   "location": "FundTransferStepDefs.The_user_is_on_fund_transfer_page()"
 });
 formatter.result({
-  "duration": 4624888657,
+  "duration": 6434932471,
   "status": "passed"
 });
 formatter.match({
@@ -56,28 +56,18 @@ formatter.match({
   "location": "FundTransferStepDefs.He_enters_payeeName(String)"
 });
 formatter.result({
-  "duration": 215682323,
+  "duration": 384187819,
   "status": "passed"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "100",
-      "offset": 11
-    }
-  ],
-  "location": "FundTransferStepDefs.He_enters_amount(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 181841753,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.match({
   "location": "FundTransferStepDefs.He_submits_request_for_fund_transfer()"
 });
 formatter.result({
-  "duration": 136435602,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -89,11 +79,85 @@ formatter.match({
   "location": "FundTransferStepDefs.Ensure_the_fund_transfer_is_complete(String)"
 });
 formatter.result({
-  "duration": 103451200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
+  "line": 15,
+  "name": "Invalid Payee",
+  "description": "",
+  "id": "customer-transfer\u0027s-fund;invalid-payee",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
   "line": 16,
+  "name": "the user is on Fund Transfer Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 17,
+  "name": "he enters \"Jack\" as payee name",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 18,
+  "name": "he enters \"100\" as amount",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "he Submits request for Fund Transfer",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "ensure a transaction failure message \"Transfer failed!! \u0027Jack\u0027 is not registered in your List of Payees\" is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "FundTransferStepDefs.The_user_is_on_fund_transfer_page()"
+});
+formatter.result({
+  "duration": 5746420429,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Jack",
+      "offset": 11
+    }
+  ],
+  "location": "FundTransferStepDefs.He_enters_payeeName(String)"
+});
+formatter.result({
+  "duration": 169711155,
+  "status": "passed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({
+  "location": "FundTransferStepDefs.He_submits_request_for_fund_transfer()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Transfer failed!! \u0027Jack\u0027 is not registered in your List of Payees",
+      "offset": 38
+    }
+  ],
+  "location": "FundTransferStepDefs.Ensure_a_transaction_failure_message(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "line": 22,
   "name": "Account is overdrawn past the overdraft limit",
   "description": "",
   "id": "customer-transfer\u0027s-fund;account-is-overdrawn-past-the-overdraft-limit",
@@ -101,27 +165,27 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 17,
+  "line": 23,
   "name": "the user is on Fund Transfer Page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 18,
+  "line": 24,
   "name": "he enters \"Tim\" as payee name",
   "keyword": "When "
 });
 formatter.step({
-  "line": 19,
+  "line": 25,
   "name": "he enters \"1000000\" as amount",
   "keyword": "And "
 });
 formatter.step({
-  "line": 20,
+  "line": 26,
   "name": "he Submits request for Fund Transfer",
   "keyword": "And "
 });
 formatter.step({
-  "line": 21,
+  "line": 27,
   "name": "ensure a transaction failure message \"Transfer failed!! account cannot be overdrawn\" is displayed",
   "keyword": "Then "
 });
@@ -129,7 +193,7 @@ formatter.match({
   "location": "FundTransferStepDefs.The_user_is_on_fund_transfer_page()"
 });
 formatter.result({
-  "duration": 5333113124,
+  "duration": 6167898884,
   "status": "passed"
 });
 formatter.match({
@@ -142,28 +206,18 @@ formatter.match({
   "location": "FundTransferStepDefs.He_enters_payeeName(String)"
 });
 formatter.result({
-  "duration": 195383275,
+  "duration": 160262501,
   "status": "passed"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "1000000",
-      "offset": 11
-    }
-  ],
-  "location": "FundTransferStepDefs.He_enters_amount(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 225563654,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.match({
   "location": "FundTransferStepDefs.He_submits_request_for_fund_transfer()"
 });
 formatter.result({
-  "duration": 138756712,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -175,7 +229,6 @@ formatter.match({
   "location": "FundTransferStepDefs.Ensure_a_transaction_failure_message(String)"
 });
 formatter.result({
-  "duration": 84090427,
-  "status": "passed"
+  "status": "skipped"
 });
 });
